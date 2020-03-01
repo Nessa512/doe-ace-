@@ -1,0 +1,107 @@
+/* ALINHAMENTO, ESPAÇAENTO, LARGURA E ALTURA */
+
+
+
+header { /* AQUI VAMOS EDITAR O ESTILO DO CONTEÚDO DO TOPO */
+        text-align: center; /* SERVE PARA ALINHAR O TEXTO */}
+section {text-align: center;}
+main {text-align: center;}
+footer {text-align: center;}
+/*PARA DEIXAR TUDO NA MESMA LINHA FAZ:*/
+header, section, main, footer { text-align: center;}
+
+/*PARA DEIXAR O ESPAÇO DO BODY COMPLETAMENTE MALEÁVEL VAMOS
+CONFIGURAR O BODY DA SEGUINTE FORMA:*/
+
+body{
+        display: flex; /* FAZ COM QUE O ESPAÇAMENTO SEJA DIVIDIDO SÓ EMM LINHAS OU EMM COLUNAS*/
+        flex-direction: column; /* DEIXA O ESPAÇAMENTO EM COLUNAS*/
+        height: 100vh; /* SERIA 100% DA ALTURA*/
+}
+
+
+/*para mexer em uma coisa e em específico faz:*/
+
+/*bota a tag e a classe, nesse caso temos o exemplo: (a cor é do 
+exemplo tbm) */
+section.form { background-color: aliceblue;}
+
+/* PARA DAR FORÇA AO COMANDO VOCÊ DEIXA COMO ESTÁ ACIMA MAS
+PARA DIMINUIR A FORÇA OU PRIORIDADE APENAS BOTE:.form */
+
+
+/* PARA TRABALHARMOS COM ESPAÇAMENTOS DE LINHAS E COLUNAS USAMOS
+DISPLAY: GRID*/
+.form{
+        display: grid;
+}
+/* COM O DISPLAY FLEX, POR PADRÃO, OS ESPAÇAMENTOS SÃO APENAS
+OU LINHA OU COLUNA E PARA SER DIVIDIDA COLOCA 1FR(FRAÇÃO)*/
+
+
+/* PARA DAR ESPAÇAMENTO AGRUPAMOS*/
+header, .form, main {
+        margin: button; /*MARGIN É USADO PARA ESPAÇAENTO*/
+}
+
+/*limites dos elementos da página*/
+header, .form, main{
+margin-bottom: 140px;
+width: 90%;
+max-width:1000px;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* OU PODEMOS COMPACTAR TUDO. SEGUINDO UM SENTIDO HORÁRIO: TOPO
+(TOP), LADO DIREITO(RIGHT), BAIXO(BOTTON) E O LADO ESQUERDO
+(LEFT)*/
+
+header, .form, main{
+        margin: 0 auto 140px;
+}
+
+/* PARA DEIXARMOS O FOOTER ALINHADO NO "CHÃO" DA PÁGINA FAZEMOS
+A CONFIGURAÇÃO NO BODY (QUE ESTÁ NA LINHA 16-20) E BOTAMOS O
+FOOTER NA SEGUINTE CONFIGURAÇÃO:*/
+
+footer{
+        margin-top: auto;
+}
+
+
+/* PARA DIFERENCIARMOS A IDÉIA DE FORÇA AO COMANDO (LINHA 29-30)
+DA IDÉIA DE CASCATA ESCREVEMOS DAS SEGUINTE FORMA: (color faz
+parte do exemplo)*/
+
+section input{
+        color: crimson;
+}
+/* ESCREVENDO SEM O PONTO DÁ A IDÉIA DE CASCATA, O PC VAI EM
+SECTION E PROCURA UMA TAG INPUT*/
+
+/* PARA PREENCHIMENTO, NO INPUT (CAIXA DE MENSAGE), POR EXEMPLO
+USAMOS O SEGUINTE COMANDO:*/
+
+form input{
+        padding: 8PX 8PX ; /*ISSO PARA PREENCHIENTO. SE QUISERMOS DE
+        UM LADO, POR EXEMPLO USA: OU PADDING-TOP, OU PADDING-TOP
+        E ASSI VAI  MAS PARA SER MAIS PRÁTICO COLOQUE APENAS
+        DUAS MEDIDAS. A PRIMEIRA "8PX" É PARA AS ALTURAS E O SEGUINDO
+        "8PX" PARA OS LADOS.*/
+
+
+
+        /*PARA DEIXAR A BORDA DA CAIXA DE MENSAGEM PERSONALIZADA
+        USA O SEGUINTE COMANDO:*/
+        border-radius: 8px; /*para personalizar os lados e altura
+        é so usar left,top...*/
+
+        /* PARA TRATAR DA BORDA (LINHA DA CAIXA DE MENSAGEM)
+        É SÓ USAR O BORDER: (LARGURA) (COR) (COMO ESTÁ APRE
+        SENTADA)*/
+        border: 10px cadetblue solid;
+}
+
+
+1:31h
